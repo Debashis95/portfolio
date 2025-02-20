@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, ChevronDown } from "lucide-react";
 import Link from "next/link";
 
-export default function Home() {
+export default function Banner() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);

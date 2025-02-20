@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import Link from "next/link";
 
-import Expertise from "@/components/expertise/expertise";
 export default function Projects() {
   const projects = [
     {
