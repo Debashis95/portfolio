@@ -107,7 +107,7 @@ export default function Banner() {
         </div>
         <motion.button
           onClick={() => scrollToSection("expertise")}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-primary hover:text-primary/80 transition-colors block"
+          className="absolute bottom-20 left-1/2.5 -translate-x-1/2 text-primary hover:text-primary/80 transition-colors block"
           animate={{
             y: [0, 10, 0],
           }}
