@@ -75,30 +75,6 @@ export default function HomePage() {
     { id: "contact", icon: Mail, label: "Contact" },
   ];
 
-  const bannerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const letterVariants = {
-    hidden: { y: 50, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 100,
-      },
-    },
-  };
-
-  const name = "Debashis Roy".split("");
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -143,39 +119,23 @@ export default function HomePage() {
               </button>
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <div className="hidden md:flex space-x-8">
-                {navItems.map(({ id, icon: Icon, label }) => (
-                  <button
-                    key={id}
-                    onClick={() => scrollToSection(id)}
-                    className={`flex items-center space-x-1 px-3 py-2 rounded-md transition-colors ${
-                      activeSection === id
-                        ? "text-primary bg-accent"
-                        : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
-                    }`}
-                  >
-                    <Icon className="w-4 h-4" />
-                    <span>{label}</span>
-                  </button>
-                ))}
-              </div>
+            <div className="hidden md:flex space-x-8">
+              {navItems.map(({ id, icon: Icon, label }) => (
+                <button
+                  key={id}
+                  onClick={() => scrollToSection(id)}
+                  className={`flex items-center space-x-1 px-3 py-2 rounded-md transition-colors ${
+                    activeSection === id
+                      ? "text-primary bg-accent"
+                      : "text-muted-foreground hover:text-foreground hover:bg-accent/50"
+                  }`}
+                >
+                  <Icon className="w-4 h-4" />
+                  <span>{label}</span>
+                </button>
+              ))}
             </div>
-
+          </div>
         </div>
 
         {isMenuOpen && (
